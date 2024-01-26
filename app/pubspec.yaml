@@ -1,5 +1,5 @@
 name: app
-description: "A new Flutter project."
+description: "AreYouAProgrammer"
 publish_to: 'none'
 version: 0.1.0
 
@@ -16,4 +16,8 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
+  assets:
+  - images/placeholder.png
+  - fonts/MontserratBold.ttf
+
   uses-material-design: true
