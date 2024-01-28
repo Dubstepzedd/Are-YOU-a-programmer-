@@ -24,6 +24,41 @@
             "question": "What company developed React Native?",
             "answers": ["Microsoft", "It wasn't developed by a company","Google", "Facebook"],
             "correct":  ["Facebook"]
+        }, 
+        {
+            "question": "What is the most interesting area in computer science?",
+            "answers": ["Operating systems", "Optimization problems", "Handling errors", "Web development"],
+            "correct": ["Web development"]
+        },
+        {
+            "question": "Which of the following are programming languages? (Select all correct answers)",
+            "answers": ["Python", "Photoshop", "Java", "HTML"],
+            "correct": ["Python", "Java"]
+        },
+        {
+            "question": "In Python, which of the following are used for creating a comment?(Can be more than one)",
+            "answers": ["// Comment", "/* Comment */", " # Comment", " -- Comment"],
+            "correct": ["# Comment"]
+        },
+        {
+            "question": "In Python, which of the following are used for creating a comment? (Can be more than one)",
+            "answers": ["// Comment", "/* Comment */", " # Comment", " -- Comment"],
+            "correct": ["# Comment"]
+        },
+        {
+            "question": "Which of the following are object-oriented programming principles? (Can be more than one)",
+            "answers": ["Encapsulation", "Abstraction", "Modules", "Macros"],
+            "correct": ["Encapsulation", "Abstraction"]
+        },
+        {
+            "question": "What does SQL stand for?",
+            "answers": ["Structured Query Language", "Sequential Query Language", "Static Query Language", "Systematic Query Language"],
+            "correct": ["Structured Query Language"] 
+        },
+        {
+            "question": "What does SQL stand for?",
+            "answers": ["isnull() function", " isempty() function", " is None keyword", "check_null() function"],
+            "correct": ["is None keyword"] 
         }
         
     ]

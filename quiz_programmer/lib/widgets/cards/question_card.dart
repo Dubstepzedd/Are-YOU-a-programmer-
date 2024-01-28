@@ -3,12 +3,13 @@ import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:quiz_programmer/helpers/transitions.dart';
 import 'package:quiz_programmer/views/game/common/game_view.dart';
 import 'package:quiz_programmer/widgets/centered_view/centered_view.dart';
 import 'package:quiz_programmer/widgets/navigation_bar/navigation_bar.dart';
 
 class QuestionCard extends StatefulWidget {
-  final int maxQuestions = 1;
+  int maxQuestions = 5;
   final Map data;
   String name = "Unknown";
   final Map<String, int> results;
@@ -50,7 +51,7 @@ class QuestionCardState extends State<QuestionCard> {
           results.addAll(widget.results);
           Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (context) => GameView(widget.names, results)),
+            createRouteFade(GameView(widget.names, results), 200),
           );
         }
       });
@@ -72,7 +73,7 @@ class QuestionCardState extends State<QuestionCard> {
     }
     
     
-    if(widget.questionsAnswered >=  widget.maxQuestions) {
+    if(widget.questionsAnswered >= widget.maxQuestions) {
       dispose();
       return true;
     }
@@ -90,13 +91,14 @@ class QuestionCardState extends State<QuestionCard> {
     super.initState();
     widget.name = widget.names[0];
     widget.names.removeAt(0);
+    widget.maxQuestions = min(widget.maxQuestions, widget.data["questions"].length);
     reset();
   }
 
   @override
   Widget build(BuildContext context) {
 
-    if(widget.data["questions"].isEmpty || widget.questionIndex == -1) {
+    if(widget.data["questions"].isEmpty || widget.questionIndex < 0) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()), backgroundColor: Colors.white);
     }
 

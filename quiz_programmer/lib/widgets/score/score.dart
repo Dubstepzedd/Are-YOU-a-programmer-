@@ -9,6 +9,11 @@ class Score extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
+    if(score.keys.isEmpty) {
+      return const Scaffold(body: Center(child: CircularProgressIndicator()), backgroundColor: Colors.white);
+    }
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
