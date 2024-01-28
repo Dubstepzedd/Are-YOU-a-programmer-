@@ -1,0 +1,31 @@
+{
+    "questions": [
+        {
+            "question": "What company owns GitHub?",
+            "answers": ["Microsoft", "Facebook","Google", "Amazon"],
+            "correct":  ["Microsoft"]
+        },
+        {
+            "question": "Is 'coupling' generally a good thing in software development?",
+            "answers": ["Yes", "No","I don't know"],
+            "correct":  ["No"]
+        },
+        {
+            "question": "Which of these is a primitive data type in Java?",
+            "answers": ["Integer", "int","String", "Object"],
+            "correct":  ["int"]
+        },
+        {
+            "question": "What company developed Flutter?",
+            "answers": ["Microsoft", "It wasn't developed by a company","Google", "Facebook"],
+            "correct":  ["Google"]
+        },
+        {
+            "question": "What company developed React Native?",
+            "answers": ["Microsoft", "It wasn't developed by a company","Google", "Facebook"],
+            "correct":  ["Facebook"]
+        }
+        
+    ]
+
+}

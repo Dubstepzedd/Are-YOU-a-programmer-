@@ -1,5 +1,5 @@
 name: quiz_programmer
-description: "A new Flutter project."
+description: "Are you are programmer? A game for programmers"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   stroke_text: any
+  socket_io_client: ^2.0.3+1
   flutter:
     sdk: flutter
 
@@ -53,8 +54,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-  #assets:
-
+  assets:
+    - assets/json/questions.json
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -80,11 +81,11 @@ flutter:
   fonts:
     - family: Open Sans
       fonts:
-        - asset: fonts/OpenSansCondensedBold-XeoZ.ttf
+        - asset: assets/fonts/OpenSansCondensedBold-XeoZ.ttf
           weight: 800
-        - asset: fonts/OpenSans-B9K8.ttf
+        - asset: assets/fonts/OpenSans-B9K8.ttf
           weight: 400
         
     - family: Block Paper
       fonts:
-        - asset: fonts/BlockPaper-51rGZ.ttf
+        - asset: assets/fonts/BlockPaper-51rGZ.ttf

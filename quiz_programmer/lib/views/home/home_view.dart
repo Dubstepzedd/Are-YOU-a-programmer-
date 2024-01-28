@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
-import 'package:quiz_programmer/views/game/options_view.dart';
+import "package:quiz_programmer/helpers/transitions.dart";
+import "package:quiz_programmer/views/game/common/game_view.dart";
+import 'package:quiz_programmer/views/game/common/mode_view.dart';
 import "package:quiz_programmer/widgets/centered_view/centered_view.dart";
 import "package:quiz_programmer/widgets/details/details.dart";
 import "package:quiz_programmer/widgets/navigation_bar/navigation_bar.dart";
@@ -21,15 +23,15 @@ class HomeView extends StatelessWidget {
                 const HomeDetails(),
                 Expanded(child: Center(
                   child: TextButton(
-                    onPressed: () => {  Navigator.push(context, MaterialPageRoute(builder: (context) => const OptionView())) },
+                    onPressed: () => {  Navigator.push(context, createRouteFade(const ModeView(), 200)) },
                      child: Container(
                       padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 15),
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: Colors.orange,
                         borderRadius: BorderRadius.circular(10),
 
                       ),
-                      child: const Text("Try now!", style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 18))
+                      child: const Text("Try now!", style: TextStyle(fontWeight: FontWeight.w800, color: Colors.black, fontSize: 18))
                     
                      ))))
                 ] 

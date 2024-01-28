@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
+import 'package:quiz_programmer/helpers/transitions.dart';
 import 'package:quiz_programmer/views/about/about_view.dart';
-import 'package:quiz_programmer/views/game/options_view.dart';
+import 'package:quiz_programmer/views/game/common/mode_view.dart';
 import "package:quiz_programmer/views/home/home_view.dart";
 import 'package:stroke_text/stroke_text.dart';
 
@@ -33,9 +34,9 @@ class CustomNavigationBar extends StatelessWidget {
           SizedBox(
             
             child: StrokeText(
-              text: "are you a programmer?",
+              text: "Are you a programmer?",
               textStyle: TextStyle(
-                color: Colors.grey,
+                color: Colors.orange,
                 fontWeight: FontWeight.w800,
                 fontSize: 25,
               ),
@@ -48,7 +49,7 @@ class CustomNavigationBar extends StatelessWidget {
               SizedBox(width: 60),
               NavBarItem("About", AboutView()),
               SizedBox(width: 60),
-              NavBarItem("Try now", OptionView()),
+              NavBarItem("Try now", ModeView()),
               SizedBox(width: 60)
             ]),
           ])
@@ -62,7 +63,7 @@ class NavBarItem extends StatelessWidget {
   final Widget view;
 
   void onPressed(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => view));
+    Navigator.push(context, createRouteFade(view, 200));
   }
 
   const NavBarItem(this.title, this.view, {super.key});

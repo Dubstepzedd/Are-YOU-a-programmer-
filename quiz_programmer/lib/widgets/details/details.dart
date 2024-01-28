@@ -22,7 +22,7 @@ class HomeDetails extends StatelessWidget {
             )
           ),
           SizedBox(height: 30),
-          Text("Do you want to test your programming knowledge? \nTry our game 'are you a programmer?' today!",
+          Text("Do you want to test your programming knowledge? \nTry our game 'Are you a programmer?' today!",
           style: TextStyle(fontSize: 21, height: 1.3))
         ],
       ),
