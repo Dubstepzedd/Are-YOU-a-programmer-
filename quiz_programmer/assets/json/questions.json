@@ -56,7 +56,7 @@
             "correct": ["Structured Query Language"] 
         },
         {
-            "question": "What does SQL stand for?",
+            "question": "What syntax below can be used to check if a variable is None in Python?",
             "answers": ["isnull() function", " isempty() function", " is None keyword", "check_null() function"],
             "correct": ["is None keyword"] 
         }
